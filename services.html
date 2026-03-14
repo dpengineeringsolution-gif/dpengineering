@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - DP Engineering | House Builders in Sri Lanka</title>
+    <meta name="description"
+        content="Expert construction services in Sri Lanka including commercial building, luxury residential villas, and premium renovations.">
+    <meta name="keywords"
+        content="construction services Sri Lanka, commercial contractors Colombo, house builders Sri Lanka, luxury villas Sri Lanka">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                        goldHover: '#c19b2e',
+                        dark: '#0a0a0a',
+                        card: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-gray-300 font-sans antialiased">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed w-full z-50 top-0 left-0 transition-all duration-300 py-4 px-6 md:px-12 bg-dark/90 backdrop-blur-md border-b border-gold/20 shadow-lg header-scrolled">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 border-2 border-gold flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+                    <span
+                        class="font-heading font-bold text-xl text-gold group-hover:text-dark transition-colors duration-300">DP</span>
+                </div>
+                <div class="font-heading font-bold text-xl uppercase tracking-widest text-white">Engineering</div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="about.html"
+                    class="text-gray-400 font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">About</a>
+                <a href="services.html"
+                    class="text-gold font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">Services</a>
+                <a href="projects.html"
+                    class="text-gray-400 font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">Projects</a>
+                <a href="contact.html"
+                    class="text-gray-400 font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">Contact</a>
+                <a href="contact.html"
+                    class="bg-gold text-dark px-6 py-2 rounded-sm font-heading font-bold uppercase tracking-wider text-sm hover:bg-goldHover transition-colors shadow-lg shadow-gold/20">Get
+                    a Quote</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white hover:text-gold focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-dark bg-opacity-95 backdrop-blur-md border-t border-gray-800 flex flex-col items-center py-6 space-y-6">
+            <a href="about.html"
+                class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">About</a>
+            <a href="services.html"
+                class="text-gold font-medium uppercase tracking-wider text-sm hover:text-gold">Services</a>
+            <a href="projects.html"
+                class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">Projects</a>
+            <a href="contact.html"
+                class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">Contact</a>
+            <a href="contact.html"
+                class="bg-gold text-dark px-6 py-2 rounded-sm font-heading font-bold uppercase tracking-wider text-sm">Get
+                a Quote</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-32 pb-16 px-6 md:px-12 bg-card border-b border-gray-800">
+        <div class="max-w-7xl mx-auto text-center fade-up">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-4">Our <span
+                    class="text-gold">Services</span></h1>
+            <p class="text-gray-400 uppercase tracking-widest text-sm font-medium">Comprehensive Engineering Solutions
+            </p>
+        </div>
+    </header>
+
+    <!-- Services Detailed -->
+    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 gap-16">
+            <!-- Service Block 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up">
+                <div class="img-zoom-container rounded-sm overflow-hidden shadow-2xl">
+                    <img src="assets/images/service_building_1772989093836.png" alt="Commercial Construction"
+                        class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Commercial <span
+                            class="text-gold">Construction</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        From state-of-the-art office spaces to expansive retail complexes, we provide end-to-end
+                        commercial construction services. Our team handles everything from initial blueprint planning to
+                        structural execution, ensuring your business environment is built for success and durability.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Corporate Headquarters</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Retail & Shopping Malls</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">SuperMarkets Buildings</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn-outline px-6 py-3 font-heading font-bold uppercase tracking-wider text-sm">Request
+                        Consultation</a>
+                </div>
+            </div>
+
+            <!-- Service Block 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up delay-[100ms]">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Luxury <span
+                            class="text-gold">Residential</span> Design</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        We specialize in constructing bespoke, luxury residential properties including high-end
+                        apartments and private villas across Sri Lanka. Our approach combines architectural elegance
+                        with robust structural integrity, creating homes that are true sanctuaries.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Custom Luxury Villas</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Boutique Apartments</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Residential Buildings</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn-outline px-6 py-3 font-heading font-bold uppercase tracking-wider text-sm">Request
+                        Consultation</a>
+                </div>
+                <div class="img-zoom-container rounded-sm overflow-hidden shadow-2xl order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Luxury Residential" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Service Block 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up delay-[200ms]">
+                <div class="img-zoom-container rounded-sm overflow-hidden shadow-2xl">
+                    <img src="assets/images/building renovation.png" alt="Renovation & Remodeling"
+                        class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Premium <span
+                            class="text-gold">Renovations</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Breathe new life into your existing structures with our premium renovation and remodeling
+                        services. We seamlessly integrate modern amenities and sophisticated aesthetics while preserving
+                        the structural core, elevating the value of your property.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Interior Replanning</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Structural Restoration</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Modern Facade Upgrades</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn-outline px-6 py-3 font-heading font-bold uppercase tracking-wider text-sm">Request
+                        Consultation</a>
+                </div>
+            </div>
+
+            <!-- Service Block 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up delay-[100ms]">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Construction<span
+                            class="text-gold">Consultation</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        We specialize in providing expert construction consultation services to clients across Sri
+                        Lanka. Our experienced team offers guidance on project planning, structural integrity, and
+                        cost optimization to ensure your construction goals are met efficiently and effectively.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Project Planning</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Structural Integrity</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Cost Optimization</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn-outline px-6 py-3 font-heading font-bold uppercase tracking-wider text-sm">Request
+                        Consultation</a>
+                </div>
+                <div class="img-zoom-container rounded-sm overflow-hidden shadow-2xl order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Luxury Residential" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Service Block 5 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up delay-[200ms]">
+                <div class="img-zoom-container rounded-sm overflow-hidden shadow-2xl">
+                    <img src="assets/images/building renovation.png" alt="Renovation & Remodeling"
+                        class="w-full h-auto object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Project <span
+                            class="text-gold">Management</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Breathe new life into your existing structures with our premium renovation and remodeling
+                        services. We seamlessly integrate modern amenities and sophisticated aesthetics while preserving
+                        the structural core, elevating the value of your property.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Interior Replanning</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Structural Restoration</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Modern Facade Upgrades</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn-outline px-6 py-3 font-heading font-bold uppercase tracking-wider text-sm">Request
+                        Consultation</a>
+                </div>
+            </div>
+
+            <!-- Service Block 6 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up delay-[100ms]">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Cost <span
+                            class="text-gold">Estimation</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        We specialize in providing expert construction consultation services to clients across Sri
+                        Lanka. Our experienced team offers guidance on project planning, structural integrity, and
+                        cost optimization to ensure your construction goals are met efficiently and effectively.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Project Planning</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Structural Integrity</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i><span
+                                class="text-sm">Cost Optimization</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn-outline px-6 py-3 font-heading font-bold uppercase tracking-wider text-sm">Request
+                        Consultation</a>
+                </div>
+                <div class="img-zoom-container rounded-sm overflow-hidden shadow-2xl order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Luxury Residential" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-card border-t border-gray-800 pt-20 pb-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1 fade-up">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 border-2 border-gold flex items-center justify-center">
+                            <span class="font-heading font-bold text-lg text-gold">DP</span>
+                        </div>
+                        <div class="font-heading font-bold text-lg uppercase tracking-widest text-white">Engineering
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-400 mb-6">The leading construction company in Sri Lanka, delivering
+                        premier engineering, home building, and commercial contractor services island-wide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="fade-up delay-[100ms]">
+                    <h4 class="text-lg font-heading font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-gold text-sm transition-colors">About
+                                Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Our
+                                Services</a></li>
+                        <li><a href="projects.html"
+                                class="text-gray-400 hover:text-gold text-sm transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-gold text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="fade-up delay-[200ms]">
+                    <h4 class="text-lg font-heading font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-gold text-sm transition-colors">Commercial Towers</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-gold text-sm transition-colors">Luxury Villas</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-gold text-sm transition-colors">Interior Design</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-gold text-sm transition-colors">Renovations</a></li>
+                    </ul>
+                </div>
+                <div class="fade-up delay-[300ms]">
+                    <h4 class="text-lg font-heading font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                            <span class="text-gray-400 text-sm">271 Samanala Mawatha, Meepe, Homagama, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-gold"></i>
+                            <span class="text-gray-400 text-sm">+94 77 193 9240</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <span class="text-gray-400 text-sm">info@dpengineering.lk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 DP Engineering. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed elegantly</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/94771939240" target="_blank"
+        class="fixed bottom-6 z-50 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

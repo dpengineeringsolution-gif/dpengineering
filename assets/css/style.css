@@ -157,3 +157,14 @@ h6 {
         transform: rotate(360deg);
     }
 }
+
+.w-full-pro{
+   width: 150px;
+  height: 150px; /* Dimensions must match */
+  border-radius: 50%; /* Makes the edges perfectly round */ 
+}
+
+.relative-pro{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+}

@@ -109,13 +109,12 @@
             <!-- Form Area -->
             <div class="bg-card border border-gray-800 p-8 md:p-10 fade-up">
                 <h3 class="text-2xl font-heading font-bold text-white mb-8">Send Us A Message</h3>
-                <!-- FormSubmit.co integration: Replace YOUR_EMAIL@DOMAIN.COM with your actual email address -->
-                <form action="https://formsubmit.co/info@dpengineering.lk" method="POST" class="space-y-6">
-                    <!-- Formsubmit Hidden Configuration -->
-                    <input type="hidden" name="_subject" value="New Inquiry from DP Engineering Website">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next"
-                        value="https://www.dpengineering.lk">
+                <!-- Web3Forms integration -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <!-- Web3Forms Hidden Configuration -->
+                    <input type="hidden" name="access_key" value="334930d4-a1d7-49c0-9996-4da8e7ca2ab2">
+                    <input type="hidden" name="subject" value="New Inquiry from DP Engineering Website">
+                    <input type="hidden" name="redirect" value="https://www.dpengineering.lk">
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="space-y-2">

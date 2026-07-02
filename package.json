@@ -1,0 +1,14 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate-sitemap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "node generate-sitemap.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

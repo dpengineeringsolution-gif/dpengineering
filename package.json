@@ -5,10 +5,13 @@
   "main": "generate-sitemap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  "build": "node generate-sitemap.js"
+    "build": "node generate-sitemap.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
 }

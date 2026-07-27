@@ -13,8 +13,8 @@ function getHtmlFiles(dir, fileList = []) {
     files.forEach(file => {
         const filePath = path.join(dir, file);
         if (fs.statSync(filePath).isDirectory()) {
-            // node_modules සහ .git ෆෝල්ඩර මඟ හරින්න
-            if (file !== 'node_modules' && file !== '.git') {
+            // node_modules, .git, සහ temp_html_backup ෆෝල්ඩර මඟ හරින්න
+            if (file !== 'node_modules' && file !== '.git' && file !== 'temp_html_backup') {
                 getHtmlFiles(filePath, fileList);
             }
         } else if (file.endsWith('.html')) {
@@ -35,7 +35,14 @@ htmlFiles.forEach(file => {
     let relativePath = path.relative(rootDir, file).replace(/\\/g, '/');
     
     // URL එකෙන් .html කෑල්ල සහ index.html ඉවත් කිරීම (Clean URLs සඳහා)
-    let route = relativePath === 'index.html' ? '' : relativePath.replace('.html', '');
+    let route = relativePath;
+    if (route === 'index.html') {
+        route = '';
+    } else if (route.endsWith('/index.html')) {
+        route = route.replace('/index.html', '');
+    } else {
+        route = route.replace('.html', '');
+    }
     
     xml += `  <url>\n    <loc>${domain}/${route}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n  </url>\n`;
 });

@@ -7,9 +7,9 @@
     <title>Our Projects - DP Engineering | Construction Portfolio Sri Lanka</title>
     <link rel="icon" type="image/webp" href="../assets/images/favicon.webp">
     <meta name="description"
-        content="View the portfolio of DP Engineering, showcasing luxury residential homes, commercial towers, and renovation projects across Sri Lanka.">
+        content="Explore the completed construction, renovation, school building, and infrastructure projects by DP Engineering across Sri Lanka.">
     <meta name="keywords"
-        content="construction projects Sri Lanka, building portfolio Colombo, residential builders Sri Lanka">
+        content="construction projects Sri Lanka, building portfolio Ratnapura Colombo, school construction, hospital renovation Eratna, Kuruvita vet office">
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,9 +32,19 @@
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        .filter-btn.active {
+            background-color: #d4af37;
+            color: #0a0a0a;
+            border-color: #d4af37;
+        }
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
 </head>
 
-<body class="bg-dark text-gray-300 font-sans antialiased">
+<body class="bg-dark text-gray-300 font-sans antialiased flex flex-col min-h-screen">
 
     <!-- Loader -->
     <div id="loader">
@@ -99,101 +109,212 @@
         <div class="max-w-7xl mx-auto text-center fade-up">
             <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-4">Our <span
                     class="text-gold">Projects</span></h1>
-            <p class="text-gray-400 uppercase tracking-widest text-sm font-medium">A Showcase of Engineering Excellence
-            </p>
+            <p class="text-gray-400 uppercase tracking-widest text-sm font-medium">Real Construction & Renovation Work Across Sri Lanka</p>
         </div>
     </header>
 
     <!-- Projects Portfolio -->
-    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Project 1 -->
-            <div class="group relative overflow-hidden rounded-sm cursor-pointer fade-up">
-                <div class="img-zoom-container">
-                    <img src="../assets/images/eheliyagoda_project.webp"
-                        alt="Eheliyagoda House Construction Project" class="w-full h-96 object-cover object-center">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6">
-                    <span class="text-gold text-xs font-bold uppercase tracking-widest mb-2 block">LKR 25 Million Residential Build</span>
-                    <h3
-                        class="text-2xl font-heading font-bold text-white transition-transform group-hover:-translate-y-2">
-                        Eheliyagoda House Project</h3>
-                    <div
-                        class="h-0 overflow-hidden group-hover:h-auto group-hover:mt-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <p class="text-sm text-gray-300 mb-4">A premium 2-story residential house featuring 5 bedrooms, 3 bathrooms, a kitchen, a dining room, and 2 living areas. Structure completed up to the roof level.</p>
-                        <a href="../contact/index.html"
-                            class="inline-flex items-center text-gold text-sm font-bold uppercase tracking-wider hover:text-white">Learn
-                            More <i class="fas fa-arrow-right ml-2"></i></a>
+    <section class="py-16 px-6 md:px-12 max-w-7xl mx-auto flex-grow w-full">
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 fade-up">
+            <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-700 text-sm font-heading font-semibold uppercase tracking-wider transition-all duration-300 hover:border-gold hover:text-gold" data-filter="all">All Projects</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-700 text-sm font-heading font-semibold uppercase tracking-wider transition-all duration-300 hover:border-gold hover:text-gold" data-filter="institutional">Commercial & Institutional</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-700 text-sm font-heading font-semibold uppercase tracking-wider transition-all duration-300 hover:border-gold hover:text-gold" data-filter="renovation">Renovations</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-700 text-sm font-heading font-semibold uppercase tracking-wider transition-all duration-300 hover:border-gold hover:text-gold" data-filter="residential">Residential</button>
+            <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-700 text-sm font-heading font-semibold uppercase tracking-wider transition-all duration-300 hover:border-gold hover:text-gold" data-filter="infrastructure">Boundary Walls & Infrastructure</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Project 1: Kuruvita Veterinary Office -->
+            <div class="project-card group bg-card border border-gray-800 hover:border-gold/50 rounded-sm overflow-hidden flex flex-col fade-up" data-category="institutional">
+                <div class="relative overflow-hidden h-64 cursor-pointer" onclick="openGallery('kuruvita')">
+                    <img src="../assets/images/projects_optimized/kuruvita_vet_office/img_01.webp" alt="Construction Veterinary Office Kuruvita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-gold text-dark text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Institutional</span>
+                    <span class="absolute top-4 right-4 bg-dark/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-sm"><i class="fas fa-camera text-gold mr-1"></i> 10 Photos</span>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <span class="text-xs text-gold uppercase tracking-widest font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> Kuruvita</span>
                     </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-heading font-bold text-white mb-3 group-hover:text-gold transition-colors">Construction of Veterinary Office</h3>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Full construction project for the Veterinary Office in Kuruvita, covering foundations, brickwork, roofing, and office space completion.</p>
+                    <button onclick="openGallery('kuruvita')" class="w-full py-3 px-4 bg-dark/80 hover:bg-gold hover:text-dark text-gold border border-gold/40 hover:border-gold font-heading font-bold uppercase tracking-wider text-xs rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-images"></i> View Photo Gallery
+                    </button>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="group relative overflow-hidden rounded-sm cursor-pointer fade-up delay-[100ms]">
-                <div class="img-zoom-container">
-                    <img src="../assets/images/slab_inspection.webp"
-                        alt="Slab Reinforcement Inspection" class="w-full h-96 object-cover object-center">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6">
-                    <span class="text-gold text-xs font-bold uppercase tracking-widest mb-2 block">Site Inspection & QA</span>
-                    <h3
-                        class="text-2xl font-heading font-bold text-white transition-transform group-hover:-translate-y-2">
-                        Slab Reinforcement Inspection</h3>
-                    <div
-                        class="h-0 overflow-hidden group-hover:h-auto group-hover:mt-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <p class="text-sm text-gray-300 mb-4">An engineering-led steel reinforcement inspection on a concrete slab before casting. We check the steel layout, bar spacing, and binding to ensure structural integrity.</p>
-                        <a href="../contact/index.html"
-                            class="inline-flex items-center text-gold text-sm font-bold uppercase tracking-wider hover:text-white">Learn
-                            More <i class="fas fa-arrow-right ml-2"></i></a>
+            <!-- Project 2: Parakaduwa Primary School -->
+            <div class="project-card group bg-card border border-gray-800 hover:border-gold/50 rounded-sm overflow-hidden flex flex-col fade-up delay-[100ms]" data-category="institutional">
+                <div class="relative overflow-hidden h-64 cursor-pointer" onclick="openGallery('parakaduwa')">
+                    <img src="../assets/images/projects_optimized/parakaduwa_school/img_01.webp" alt="Construction School Building Parakaduwa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-gold text-dark text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Educational</span>
+                    <span class="absolute top-4 right-4 bg-dark/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-sm"><i class="fas fa-camera text-gold mr-1"></i> 10 Photos</span>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <span class="text-xs text-gold uppercase tracking-widest font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> Parakaduwa</span>
                     </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-heading font-bold text-white mb-3 group-hover:text-gold transition-colors">School Building Construction</h3>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Construction of a classroom building at Parakaduwa Primary School, built with high structural safety and modern school architecture.</p>
+                    <button onclick="openGallery('parakaduwa')" class="w-full py-3 px-4 bg-dark/80 hover:bg-gold hover:text-dark text-gold border border-gold/40 hover:border-gold font-heading font-bold uppercase tracking-wider text-xs rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-images"></i> View Photo Gallery
+                    </button>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="group relative overflow-hidden rounded-sm cursor-pointer fade-up delay-[200ms]">
-                <div class="img-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Ocean View Villa" class="w-full h-96 object-cover object-center">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6">
-                    <span class="text-gold text-xs font-bold uppercase tracking-widest mb-2 block">Bespoke Design</span>
-                    <h3
-                        class="text-2xl font-heading font-bold text-white transition-transform group-hover:-translate-y-2">
-                        OceanView Villa, Galle</h3>
-                    <div
-                        class="h-0 overflow-hidden group-hover:h-auto group-hover:mt-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <p class="text-sm text-gray-300 mb-4">A high-end sophisticated seaside villa merging indoor
-                            spaces seamlessly with the coastline breeze.</p>
-                        <a href="../contact/index.html"
-                            class="inline-flex items-center text-gold text-sm font-bold uppercase tracking-wider hover:text-white">Learn
-                            More <i class="fas fa-arrow-right ml-2"></i></a>
+            <!-- Project 3: Eratna Hospital MOIC Quarters -->
+            <div class="project-card group bg-card border border-gray-800 hover:border-gold/50 rounded-sm overflow-hidden flex flex-col fade-up delay-[200ms]" data-category="renovation">
+                <div class="relative overflow-hidden h-64 cursor-pointer" onclick="openGallery('eratna')">
+                    <img src="../assets/images/projects_optimized/eratna_hospital_quarters/img_01.webp" alt="Renovation MOIC Quarters Eratna Hospital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-gold text-dark text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Renovation</span>
+                    <span class="absolute top-4 right-4 bg-dark/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-sm"><i class="fas fa-camera text-gold mr-1"></i> 10 Photos</span>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <span class="text-xs text-gold uppercase tracking-widest font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> Eratna</span>
                     </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-heading font-bold text-white mb-3 group-hover:text-gold transition-colors">MOIC Quarters Renovation</h3>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Comprehensive renovation of Medical Officer in Charge (MOIC) residential quarters at Eratna Hospital, including structural restoration.</p>
+                    <button onclick="openGallery('eratna')" class="w-full py-3 px-4 bg-dark/80 hover:bg-gold hover:text-dark text-gold border border-gold/40 hover:border-gold font-heading font-bold uppercase tracking-wider text-xs rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-images"></i> View Photo Gallery
+                    </button>
                 </div>
             </div>
 
-            <!-- Project 4 -->
-            <div class="group relative overflow-hidden rounded-sm cursor-pointer fade-up delay-[300ms]">
-                <div class="img-zoom-container">
-                    <img src="../assets/images/service_building_1772989093836.webp" alt="Industrial Complex"
-                        class="w-full h-96 object-cover object-center">
+            <!-- Project 4: Diyagama Boundary Wall -->
+            <div class="project-card group bg-card border border-gray-800 hover:border-gold/50 rounded-sm overflow-hidden flex flex-col fade-up delay-[300ms]" data-category="infrastructure">
+                <div class="relative overflow-hidden h-64 cursor-pointer" onclick="openGallery('diyagama')">
+                    <img src="../assets/images/projects_optimized/diyagama_boundary_wall/img_01.webp" alt="Construction Boundary Wall Diyagama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-gold text-dark text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Infrastructure</span>
+                    <span class="absolute top-4 right-4 bg-dark/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-sm"><i class="fas fa-camera text-gold mr-1"></i> 10 Photos</span>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <span class="text-xs text-gold uppercase tracking-widest font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> Diyagama</span>
+                    </div>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6">
-                    <span class="text-gold text-xs font-bold uppercase tracking-widest mb-2 block">Industrial
-                        Facility</span>
-                    <h3
-                        class="text-2xl font-heading font-bold text-white transition-transform group-hover:-translate-y-2">
-                        Metro Tech Park</h3>
-                    <div
-                        class="h-0 overflow-hidden group-hover:h-auto group-hover:mt-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <p class="text-sm text-gray-300 mb-4">A sprawling technology and industrial campus engineered to
-                            highest global standards.</p>
-                        <a href="../contact/index.html"
-                            class="inline-flex items-center text-gold text-sm font-bold uppercase tracking-wider hover:text-white">Learn
-                            More <i class="fas fa-arrow-right ml-2"></i></a>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-heading font-bold text-white mb-3 group-hover:text-gold transition-colors">Boundary Wall & Retaining Structure</h3>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Reinforced concrete boundary wall and retaining masonry structure completed at Diyagama to protect and demarcate property limits.</p>
+                    <button onclick="openGallery('diyagama')" class="w-full py-3 px-4 bg-dark/80 hover:bg-gold hover:text-dark text-gold border border-gold/40 hover:border-gold font-heading font-bold uppercase tracking-wider text-xs rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-images"></i> View Photo Gallery
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 5: Eheliyagoda House -->
+            <div class="project-card group bg-card border border-gray-800 hover:border-gold/50 rounded-sm overflow-hidden flex flex-col fade-up delay-[400ms]" data-category="residential">
+                <div class="relative overflow-hidden h-64 cursor-pointer" onclick="openGallery('eheliyagoda')">
+                    <img src="../assets/images/eheliyagoda_project.webp" alt="Eheliyagoda House Construction Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-gold text-dark text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Residential</span>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <span class="text-xs text-gold uppercase tracking-widest font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> Eheliyagoda</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-heading font-bold text-white mb-3 group-hover:text-gold transition-colors">Eheliyagoda 2-Story House</h3>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">A premium 2-story residential house featuring 5 bedrooms, 3 bathrooms, kitchen, dining area, and 2 living spaces built up to roof level.</p>
+                    <button onclick="openGallery('eheliyagoda')" class="w-full py-3 px-4 bg-dark/80 hover:bg-gold hover:text-dark text-gold border border-gold/40 hover:border-gold font-heading font-bold uppercase tracking-wider text-xs rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-images"></i> View Photo Gallery
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 md:p-8 transition-all duration-300">
+        <!-- Modal Top Bar -->
+        <div class="flex justify-between items-center z-10">
+            <div>
+                <h4 id="modal-project-title" class="font-heading font-bold text-lg md:text-xl text-white">Project Title</h4>
+                <p id="modal-photo-counter" class="text-xs text-gold uppercase tracking-widest font-medium">Photo 1 of 10</p>
+            </div>
+            <button onclick="closeGallery()" class="w-12 h-12 rounded-full border border-gold/30 hover:border-gold bg-dark/80 text-white hover:text-gold flex items-center justify-center text-xl transition-all duration-300">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Main Display Image Container -->
+        <div class="relative flex-grow flex items-center justify-center my-4 overflow-hidden">
+            <button onclick="prevPhoto()" class="absolute left-2 md:left-6 z-20 w-12 h-12 rounded-full bg-dark/80 border border-gold/40 text-gold hover:bg-gold hover:text-dark flex items-center justify-center text-lg transition-all duration-300">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <img id="modal-main-img" src="" alt="Project Photo" class="max-h-[70vh] max-w-full object-contain rounded-sm shadow-2xl transition-all duration-300">
+
+            <button onclick="nextPhoto()" class="absolute right-2 md:right-6 z-20 w-12 h-12 rounded-full bg-dark/80 border border-gold/40 text-gold hover:bg-gold hover:text-dark flex items-center justify-center text-lg transition-all duration-300">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Thumbnail Navigation Strip -->
+        <div class="z-10 w-full overflow-x-auto py-2">
+            <div id="modal-thumbnails" class="flex justify-center items-center gap-3 min-w-max mx-auto px-4">
+                <!-- Thumbnails dynamically rendered -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Client Feedback Section -->
+    <section class="py-20 bg-card border-t border-gray-800 px-6 md:px-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+                <div class="inline-flex items-center gap-3 mb-4 justify-center w-full">
+                    <span class="w-8 h-px bg-gold"></span>
+                    <span class="text-gold font-medium uppercase tracking-widest text-sm">Client Feedback</span>
+                    <span class="w-8 h-px bg-gold"></span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Project <span
+                        class="text-gold">Reviews</span></h2>
+                <p class="text-gray-400">Authentic feedback from clients on completed construction projects.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Feedback 1: Eheliyagoda Project -->
+                <div class="bg-dark border border-gray-800 p-8 rounded-sm relative fade-up hover:border-gold transition-colors duration-300">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-gray-800/30"></i>
+                    <div class="flex text-gold text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 text-sm leading-relaxed relative z-10">
+                        "The team built our 2-story residential house in Eheliyagoda up to roof level with top-tier engineering supervision. Transparent pricing, zero unexpected costs, and timely completion throughout the build."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-card border border-gold/40 rounded-full flex items-center justify-center font-heading font-bold text-gold">
+                            EH
+                        </div>
+                        <div>
+                            <h4 class="text-white font-heading font-bold text-sm">Eheliyagoda Project Client</h4>
+                            <p class="text-xs text-gold uppercase tracking-widest">2-Story Residential Construction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback 2: Diyagama Project -->
+                <div class="bg-dark border border-gray-800 p-8 rounded-sm relative fade-up delay-[100ms] hover:border-gold transition-colors duration-300">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-gray-800/30"></i>
+                    <div class="flex text-gold text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 text-sm leading-relaxed relative z-10">
+                        "DP Engineering constructed our boundary wall with exceptional precision. The soil retention, structural alignment, and masonry finishing were handled professionally without any hassle."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-card border border-gold/40 rounded-full flex items-center justify-center font-heading font-bold text-gold">
+                            DY
+                        </div>
+                        <div>
+                            <h4 class="text-white font-heading font-bold text-sm">Diyagama Project Client</h4>
+                            <p class="text-xs text-gold uppercase tracking-widest">Boundary Wall & Roller Door Structure</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,7 +322,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 bg-gold relative overflow-hidden">
+    <section class="py-20 bg-gold relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10 fade-up">
             <h2 class="text-3xl md:text-5xl font-heading font-bold text-dark mb-6">Ready to Build Your <span
                     class="text-white">Dream Project</span>?</h2>
@@ -226,8 +347,7 @@
                         </div>
                     </a>
                     <p class="text-sm text-gray-400 mb-6">The leading construction company in Sri Lanka, delivering
-                        premier
-                        engineering, home building, and commercial contractor services island-wide.</p>
+                        premier engineering, home building, and commercial contractor services island-wide.</p>
                     <div class="flex space-x-4">
                         <a href="https://web.facebook.com/profile.php?id=61579140863869"
                             class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"><i
@@ -243,28 +363,19 @@
                 <div class="fade-up delay-[100ms]">
                     <h4 class="text-lg font-heading font-bold text-white mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="../about/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">About
-                                Us</a></li>
-                        <li><a href="../services/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Our
-                                Services</a></li>
-                        <li><a href="../projects/index.html"
-                                class="text-gray-400 hover:text-gold text-sm transition-colors">Portfolio</a></li>
-                        <li><a href="../contact/index.html"
-                                class="text-gray-400 hover:text-gold text-sm transition-colors">Contact</a></li>
+                        <li><a href="../about/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">About Us</a></li>
+                        <li><a href="../services/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Our Services</a></li>
+                        <li><a href="../projects/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Portfolio</a></li>
+                        <li><a href="../contact/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div class="fade-up delay-[200ms]">
                     <h4 class="text-lg font-heading font-bold text-white mb-6">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="../services/index.html"
-                                class="text-gray-400 hover:text-gold text-sm transition-colors">House Construction</a>
-                        </li>
-                        <li><a href="../services/index.html"
-                                class="text-gray-400 hover:text-gold text-sm transition-colors">House Plans</a></li>
-                        <li><a href="../services/index.html"
-                                class="text-gray-400 hover:text-gold text-sm transition-colors">BOQ & Cost Estimation</a></li>
-                        <li><a href="../services/index.html"
-                                class="text-gray-400 hover:text-gold text-sm transition-colors">Structural Advice</a></li>
+                        <li><a href="../services/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">House Construction</a></li>
+                        <li><a href="../services/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">House Plans</a></li>
+                        <li><a href="../services/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">BOQ & Cost Estimation</a></li>
+                        <li><a href="../services/index.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Structural Advice</a></li>
                     </ul>
                 </div>
                 <div class="fade-up delay-[300ms]">
@@ -285,8 +396,7 @@
                     </ul>
                 </div>
             </div>
-            <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                 <p>&copy; 2026 DP Engineering. All rights reserved.</p>
                 <p class="mt-2 md:mt-0">Designed elegantly</p>
             </div>
@@ -295,11 +405,120 @@
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/94771939240" target="_blank"
-        class="fixed bottom-6 z-50 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300">
+        class="fixed bottom-6 z-40 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="../assets/js/main.js"></script>
+
+    <!-- Projects Gallery & Filter Logic -->
+    <script>
+        const projectData = {
+            kuruvita: {
+                title: "Construction of Veterinary Office - Kuruvita",
+                photos: Array.from({length: 10}, (_, i) => `../assets/images/projects_optimized/kuruvita_vet_office/img_${(i+1).toString().padStart(2, '0')}.webp`)
+            },
+            parakaduwa: {
+                title: "School Building Construction - Parakaduwa Primary School",
+                photos: Array.from({length: 10}, (_, i) => `../assets/images/projects_optimized/parakaduwa_school/img_${(i+1).toString().padStart(2, '0')}.webp`)
+            },
+            eratna: {
+                title: "MOIC Quarters Renovation - Eratna Hospital",
+                photos: Array.from({length: 10}, (_, i) => `../assets/images/projects_optimized/eratna_hospital_quarters/img_${(i+1).toString().padStart(2, '0')}.webp`)
+            },
+            diyagama: {
+                title: "Boundary Wall & Retaining Structure - Diyagama",
+                photos: Array.from({length: 10}, (_, i) => `../assets/images/projects_optimized/diyagama_boundary_wall/img_${(i+1).toString().padStart(2, '0')}.webp`)
+            },
+            eheliyagoda: {
+                title: "Eheliyagoda 2-Story Residential House",
+                photos: ["../assets/images/eheliyagoda_project.webp"]
+            }
+        };
+
+        let currentProjectKey = null;
+        let currentPhotoIndex = 0;
+
+        function openGallery(projKey) {
+            if (!projectData[projKey]) return;
+            currentProjectKey = projKey;
+            currentPhotoIndex = 0;
+            updateModalView();
+            document.getElementById('gallery-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            document.getElementById('gallery-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateModalView() {
+            const proj = projectData[currentProjectKey];
+            if (!proj) return;
+
+            document.getElementById('modal-project-title').textContent = proj.title;
+            document.getElementById('modal-photo-counter').textContent = `Photo ${currentPhotoIndex + 1} of ${proj.photos.length}`;
+            document.getElementById('modal-main-img').src = proj.photos[currentPhotoIndex];
+
+            // Render thumbnails
+            const thumbContainer = document.getElementById('modal-thumbnails');
+            thumbContainer.innerHTML = '';
+
+            proj.photos.forEach((src, idx) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = `Thumbnail ${idx+1}`;
+                img.className = `w-16 h-12 object-cover rounded cursor-pointer border-2 transition-all ${idx === currentPhotoIndex ? 'border-gold scale-105 opacity-100' : 'border-transparent opacity-50 hover:opacity-100'}`;
+                img.onclick = () => {
+                    currentPhotoIndex = idx;
+                    updateModalView();
+                };
+                thumbContainer.appendChild(img);
+            });
+        }
+
+        function nextPhoto() {
+            const proj = projectData[currentProjectKey];
+            if (!proj) return;
+            currentPhotoIndex = (currentPhotoIndex + 1) % proj.photos.length;
+            updateModalView();
+        }
+
+        function prevPhoto() {
+            const proj = projectData[currentProjectKey];
+            if (!proj) return;
+            currentPhotoIndex = (currentPhotoIndex - 1 + proj.photos.length) % proj.photos.length;
+            updateModalView();
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('gallery-modal');
+            if (modal.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') closeGallery();
+            if (e.key === 'ArrowRight') nextPhoto();
+            if (e.key === 'ArrowLeft') prevPhoto();
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

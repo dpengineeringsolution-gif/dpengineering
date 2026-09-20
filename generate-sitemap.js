@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // ඔයාගේ වෙබ් අඩවියේ නම මෙතනට දෙන්න (අගට / දාන්න එපා)
-const domain = 'https://oyagewebsite.com'; 
+const domain = 'https://dpengineering.lk'; 
 
 // HTML files තියෙන ෆෝල්ඩරය (මෙය root එක නම් __dirname ලෙස තබන්න)
 const rootDir = __dirname; 

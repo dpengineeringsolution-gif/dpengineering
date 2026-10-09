@@ -71,6 +71,8 @@
                     class="text-gray-400 font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">About</a>
                 <a href="../services/index.html"
                     class="text-gray-400 font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">Services</a>
+                <a href="../packages/index.html"
+                    class="text-gray-400 font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">Packages</a>
                 <a href="../projects/index.html"
                     class="text-gold font-medium uppercase tracking-wider text-sm transition-colors hover:text-gold">Projects</a>
                 <a href="../contact/index.html"
@@ -95,6 +97,8 @@
                 class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">About</a>
             <a href="../services/index.html"
                 class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">Services</a>
+            <a href="../packages/index.html"
+                class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">Packages</a>
             <a href="../projects/index.html" class="text-gold font-medium uppercase tracking-wider text-sm">Projects</a>
             <a href="../contact/index.html"
                 class="text-gray-400 font-medium uppercase tracking-wider text-sm hover:text-gold">Contact</a>
@@ -210,9 +214,10 @@
             <!-- Project 5: Eheliyagoda House -->
             <div class="project-card group bg-card border border-gray-800 hover:border-gold/50 rounded-sm overflow-hidden flex flex-col fade-up delay-[400ms]" data-category="residential">
                 <div class="relative overflow-hidden h-64 cursor-pointer" onclick="openGallery('eheliyagoda')">
-                    <img src="../assets/images/eheliyagoda_project.webp" alt="Eheliyagoda House Construction Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="../assets/images/projects_optimized/eheliyagoda_house/img_01.webp" alt="Eheliyagoda House Construction Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
                     <span class="absolute top-4 left-4 bg-gold text-dark text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Residential</span>
+                    <span class="absolute top-4 right-4 bg-dark/80 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-sm"><i class="fas fa-camera text-gold mr-1"></i> 10 Photos</span>
                     <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
                         <span class="text-xs text-gold uppercase tracking-widest font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> Eheliyagoda</span>
                     </div>
@@ -432,7 +437,7 @@
             },
             eheliyagoda: {
                 title: "Eheliyagoda 2-Story Residential House",
-                photos: ["../assets/images/eheliyagoda_project.webp"]
+                photos: Array.from({length: 10}, (_, i) => `../assets/images/projects_optimized/eheliyagoda_house/img_${(i+1).toString().padStart(2, '0')}.webp`)
             }
         };
 
